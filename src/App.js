@@ -5,13 +5,22 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
+import { useState } from "react";
 
 function App() {
+  const [closeSidebar, setCloseSidebar] = useState(true);
+
+  function toggleSidebar() {
+    setCloseSidebar((prevClose) => !prevClose);
+  }
   return (
     <div className="container">
       <Routes>
         <Route path="/">
-          <Route index element={<Home />} />
+          <Route
+            index
+            element={<Home closeSdb={closeSidebar} toggleSdb={toggleSidebar} />}
+          />
           <Route path="login" element={<Login />} />
           <Route path="librarians">
             <Route index element={<List />} />
