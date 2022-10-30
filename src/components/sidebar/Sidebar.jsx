@@ -33,21 +33,21 @@ const Sidebar = ({ closeSdb }) => {
             </li>
 
             <li className="nav-link">
-              <Link to="/list">
+              <Link to="/librarians">
                 <i className="bx bx-group icon"></i>
                 <span className="text nav-text">Bibliotekari</span>
               </Link>
             </li>
 
             <li className="nav-link">
-              <Link to="/list">
+              <Link to="/students">
                 <i className="bx bx-id-card icon"></i>
                 <span className="text nav-text">Ucenici</span>
               </Link>
             </li>
 
             <li className="nav-link">
-              <Link to="/list">
+              <Link to="/books">
                 <i className="bx bx-book-alt icon"></i>
                 <span className="text nav-text">Knjige</span>
               </Link>

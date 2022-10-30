@@ -1,49 +1,51 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import profileImg from "../../img/profile-main.jpg";
 
-const Navbar = ({ toggleSdb }) => {
+const Navbar = ({ toggleSdb, toggleDrp, openDrp, toggleProf, openProf }) => {
   return (
     <div className="nav-head">
       <div className="menu-toggle toggle">
         <i className="bx bx-menu icon" onClick={toggleSdb}></i>
       </div>
       <div className="right-side">
-        <div className="dropdown">
+        <div className={openDrp ? "dropdown open" : "dropdown"}>
           <div className="create">
-            <button>
+            <button onClick={toggleDrp}>
               <i className="bx bx-add-to-queue icon dropdown-btn"></i>
             </button>
 
             <ul>
               <li className="drop-link">
-                <a href="./add-librarian.html">+ Bibliotekar</a>
+                <Link>+ Bibliotekar</Link>
               </li>
               <li className="drop-link">
-                <a href="./add-student.html">+ Ucenik</a>
+                <Link>+ Ucenik</Link>
               </li>
               <li className="drop-link">
-                <a href="./add-books.html">+ Knjiga</a>
+                <Link>+ Knjiga</Link>
               </li>
               <li className="drop-link">
-                <a href="./add-author.html">+ Autor</a>
+                <Link>+ Autor</Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="profile">
-          <div className="profile-img">
-            <img className="img-btn" src="./img/profile-valentina.jpg" alt="" />
+        <div className={openProf ? "profile open" : "profile"}>
+          <div className="profile-img" onClick={toggleProf}>
+            <img className="img-btn" src={profileImg} alt="" />
           </div>
           <ul className="profile-links">
             <li className="drop-link">
-              <a href="./profile.html">
+              <Link to="/">
                 <i className="bx bx-user icon"></i> Profile
-              </a>
+              </Link>
             </li>
             <li className="drop-link">
-              <a href="../index.html">
+              <Link to="/">
                 <i className="bx bx-log-out-circle icon"></i> Logout
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

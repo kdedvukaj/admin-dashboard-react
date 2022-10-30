@@ -9,9 +9,19 @@ import { useState } from "react";
 
 function App() {
   const [closeSidebar, setCloseSidebar] = useState(true);
+  const [openDropdown, setOpenDropdown] = useState(false);
+  const [openProf, setOpenProf] = useState(false);
 
   function toggleSidebar() {
     setCloseSidebar((prevClose) => !prevClose);
+  }
+
+  function toggleDropdown() {
+    setOpenDropdown((prevOpen) => !prevOpen);
+  }
+
+  function toggleProf() {
+    setOpenProf((prevOpen) => !prevOpen);
   }
   return (
     <div className="container">
@@ -19,21 +29,66 @@ function App() {
         <Route path="/">
           <Route
             index
-            element={<Home closeSdb={closeSidebar} toggleSdb={toggleSidebar} />}
+            element={
+              <Home
+                closeSdb={closeSidebar}
+                toggleSdb={toggleSidebar}
+                openDrp={openDropdown}
+                toggleDrp={toggleDropdown}
+                openProf={openProf}
+                toggleProf={toggleProf}
+              />
+            }
           />
           <Route path="login" element={<Login />} />
           <Route path="librarians">
-            <Route index element={<List />} />
+            <Route
+              index
+              element={
+                <List
+                  closeSdb={closeSidebar}
+                  toggleSdb={toggleSidebar}
+                  openDrp={openDropdown}
+                  toggleDrp={toggleDropdown}
+                  openProf={openProf}
+                  toggleProf={toggleProf}
+                />
+              }
+            />
             <Route path=":librarianId" element={<Single />} />
             <Route path="new" element={<New />} />
           </Route>
           <Route path="students">
-            <Route index element={<List />} />
+            <Route
+              index
+              element={
+                <List
+                  closeSdb={closeSidebar}
+                  toggleSdb={toggleSidebar}
+                  openDrp={openDropdown}
+                  toggleDrp={toggleDropdown}
+                  openProf={openProf}
+                  toggleProf={toggleProf}
+                />
+              }
+            />
             <Route path=":studentId" element={<Single />} />
             <Route path="new" element={<New />} />
           </Route>
           <Route path="books">
-            <Route index element={<List />} />
+            <Route
+              index
+              element={
+                <List
+                  closeSdb={closeSidebar}
+                  toggleSdb={toggleSidebar}
+                  openDrp={openDropdown}
+                  toggleDrp={toggleDropdown}
+                  openProf={openProf}
+                  toggleProf={toggleProf}
+                />
+              }
+            />
             <Route path=":bookId" element={<Single />} />
             <Route path="new" element={<New />} />
           </Route>
