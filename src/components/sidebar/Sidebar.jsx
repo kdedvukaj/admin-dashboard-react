@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logo from "../../img/logo.png";
-
 const Sidebar = ({ closeSdb }) => {
   return (
     <nav className={closeSdb ? "sidebar close" : "sidebar"}>
@@ -10,7 +8,7 @@ const Sidebar = ({ closeSdb }) => {
         <div className="image-text">
           <span className="image">
             <Link to="/">
-              <img src={logo} alt="" />
+              <img src="./img/logo.png" alt="" />
             </Link>
           </span>
 

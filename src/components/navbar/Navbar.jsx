@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import profileImg from "../../img/profile-main.jpg";
 
 const Navbar = ({ toggleSdb, toggleDrp, openDrp, toggleProf, openProf }) => {
   return (
@@ -34,7 +33,7 @@ const Navbar = ({ toggleSdb, toggleDrp, openDrp, toggleProf, openProf }) => {
 
         <div className={openProf ? "profile open" : "profile"}>
           <div className="profile-img" onClick={toggleProf}>
-            <img className="img-btn" src={profileImg} alt="" />
+            <img className="img-btn" src="./img/profile-main.jpg" alt="" />
           </div>
           <ul className="profile-links">
             <li className="drop-link">

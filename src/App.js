@@ -24,7 +24,7 @@ function App() {
     setOpenProf((prevOpen) => !prevOpen);
   }
   return (
-    <div className="container">
+    <>
       <Routes>
         <Route path="/">
           <Route
@@ -94,7 +94,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 
