@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import logo from "../../img/logo.png";
 
 const Sidebar = () => {
   return (
@@ -6,9 +9,9 @@ const Sidebar = () => {
       <header>
         <div class="image-text">
           <span class="image">
-            <a href="./">
-              <img src="./img/logo.png" alt="" />
-            </a>
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
           </span>
 
           <div class="text logo-text">
@@ -23,45 +26,45 @@ const Sidebar = () => {
         <div class="menu">
           <ul class="menu-links">
             <li class="nav-link">
-              <a href="./index.html">
+              <Link to="/">
                 <i class="bx bx-home-alt icon"></i>
                 <span class="text nav-text">Dashboard</span>
-              </a>
+              </Link>
             </li>
 
             <li class="nav-link">
-              <a href="./librarians.html">
+              <Link to="/list">
                 <i class="bx bx-group icon"></i>
                 <span class="text nav-text">Bibliotekari</span>
-              </a>
+              </Link>
             </li>
 
             <li class="nav-link">
-              <a href="./students.html">
+              <Link to="/list">
                 <i class="bx bx-id-card icon"></i>
                 <span class="text nav-text">Ucenici</span>
-              </a>
+              </Link>
             </li>
 
             <li class="nav-link">
-              <a href="./books.html">
+              <Link to="/list">
                 <i class="bx bx-book-alt icon"></i>
                 <span class="text nav-text">Knjige</span>
-              </a>
+              </Link>
             </li>
 
             <li class="nav-link">
-              <a href="./authors.html">
+              <Link to="/">
                 <i class="bx bx-briefcase-alt-2 icon"></i>
                 <span class="text nav-text">Autori</span>
-              </a>
+              </Link>
             </li>
 
             <li class="nav-link">
-              <a href="./rental.html">
+              <Link to="/">
                 <i class="bx bx-repost icon"></i>
                 <span class="text nav-text">Izdavanje Knjiga</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -69,10 +72,10 @@ const Sidebar = () => {
         <div class="bottom-content">
           <ul>
             <li class="nav-link">
-              <a href="./settings.html">
+              <Link to="/">
                 <i class="bx bx-wrench icon"></i>
                 <span class="text nav-text">Settings</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
