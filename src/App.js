@@ -52,6 +52,7 @@ function App() {
                   toggleDrp={toggleDropdown}
                   openProf={openProf}
                   toggleProf={toggleProf}
+                  pageName="Bibliotekari"
                 />
               }
             />
@@ -69,6 +70,7 @@ function App() {
                   toggleDrp={toggleDropdown}
                   openProf={openProf}
                   toggleProf={toggleProf}
+                  pageName="Ucenici"
                 />
               }
             />
@@ -86,6 +88,7 @@ function App() {
                   toggleDrp={toggleDropdown}
                   openProf={openProf}
                   toggleProf={toggleProf}
+                  pageName="Knjige"
                 />
               }
             />
