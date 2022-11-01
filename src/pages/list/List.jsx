@@ -2,6 +2,8 @@ import React from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Datatable from "../../components/datatable/Datatable";
+import Button from "../../components/button/Button";
+import Search from "../../components/search/Search";
 
 const List = ({
   closeSdb,
@@ -11,6 +13,7 @@ const List = ({
   openProf,
   toggleProf,
   pageName,
+  data,
 }) => {
   return (
     <div className="container">
@@ -27,23 +30,26 @@ const List = ({
           <h1>{pageName}</h1>
         </div>
         <div className="table">
-          <div className="table-header"></div>
+          <div className="table-header">
+            <Button pageName={pageName} />
+            <Search />
+          </div>
           <div className="table-section">
-            <Datatable />
+            <Datatable data={data} />
           </div>
           <div className="table-pagination">
-            <div class="chevs-left">
-              <i class="bx bx-chevrons-left"></i>
+            <div className="chevs-left">
+              <i className="bx bx-chevrons-left"></i>
             </div>
-            <div class="chev-left">
-              <i class="bx bx-chevron-left"></i>
+            <div className="chev-left">
+              <i className="bx bx-chevron-left"></i>
             </div>
             <p>1 of 1</p>
-            <div class="chev-right">
-              <i class="bx bx-chevron-right"></i>
+            <div className="chev-right">
+              <i className="bx bx-chevron-right"></i>
             </div>
-            <div class="chevs-right">
-              <i class="bx bx-chevrons-right"></i>
+            <div className="chevs-right">
+              <i className="bx bx-chevrons-right"></i>
             </div>
           </div>
         </div>

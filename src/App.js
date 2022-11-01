@@ -7,6 +7,8 @@ import Single from "./pages/single/Single";
 import New from "./pages/new/New";
 import { useState } from "react";
 
+import { librariansData } from "./components/data/data";
+
 function App() {
   const [closeSidebar, setCloseSidebar] = useState(true);
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -53,6 +55,7 @@ function App() {
                   openProf={openProf}
                   toggleProf={toggleProf}
                   pageName="Bibliotekari"
+                  data={librariansData}
                 />
               }
             />
