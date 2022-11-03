@@ -34,9 +34,7 @@ const List = ({
             <Button pageName={pageName} />
             <Search />
           </div>
-          <div className="table-section">
-            <Datatable data={data} />
-          </div>
+          <div className="table-section">{/* <Datatable data={data} /> */}</div>
           <div className="table-pagination">
             <div className="chevs-left">
               <i className="bx bx-chevrons-left"></i>

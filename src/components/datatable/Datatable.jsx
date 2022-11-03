@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Datatable({ data }) {
+  //   function deleteRow(r) {
+  //     let text = "Do you really want to delete?";
+  //     if (confirm(text) === true) {
+  //       var i = r.parentNode.parentNode.rowIndex;
+  //       document.getElementById("searchTable").deleteRow(i);
+  //     }
+  //   }
   return (
     <table id="searchTable">
       <thead>
@@ -63,7 +70,7 @@ function Datatable({ data }) {
                 <input
                   type="checkbox"
                   name="check"
-                  onclick="toggleCheckHide(this)"
+                  onClick="toggleCheckHide(this)"
                 />
               </td>
               <td className="img-name">
@@ -81,7 +88,7 @@ function Datatable({ data }) {
                 <i className="bx bx-edit"></i>
               </td>
               <td className="delete">
-                <i onclick="deleteRow(this)" className="bx bx-trash"></i>
+                <i className="bx bx-trash"></i>
               </td>
             </tr>
           );
